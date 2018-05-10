@@ -32,9 +32,7 @@ namespace Node {//namespace
         _response.write( "Ich habe dich gehört<br/>" );//konsolenausgabe bzw terminal
 
         for ( let key in query )//durchgeben von schlüssel
-            //console.log(query[key]);
-            //Ausgabe der Queryinformation (a, b)
-            _response.write( "eingegebene Infos: " + ( query[key] ) + "<br>" );
+        _response.write( "eingegebene Infos: " + ( query[key] ) + "<br>" );
         _response.write( "Ergebnis: " + ( a + b ) );//wenn sever zuhört u daten bearbeitet dann wird ergebnis ausgegeben
         _response.end();//info zum nutzer schicken
     }

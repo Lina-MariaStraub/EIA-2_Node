@@ -32,7 +32,7 @@ namespace L06_Interfaces {
         for (let i = 0; i < 3; i++) {      
             //Zugriff auf Interface
             let student: L06_Interfaces.Studi = {
-                name: "Nachname " + i,
+                name: "Straub " + i,
                 firstname: "Alexandra" + i,
                 matrikel: Math.floor(Math.random() * 222222),
                 age: Math.floor(Math.random() * 22),
@@ -120,7 +120,7 @@ namespace L06_Interfaces {
             output.value += line + "\n";
             
         } else { //Keine Übereinstimmung mit Student
-            alert( "Es wurde kein Student gefunden, bitte versuchen sie es noch einmal." );
+            alert( "Kein Student gefunden. Versuch es nochmal." );
         }
     }
     

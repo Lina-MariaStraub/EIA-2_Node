@@ -33,7 +33,7 @@ namespace L06_Interfaces {
             //Zugriff auf Interface
             let student: L06_Interfaces.Studi = {
                 name: "Nachname " + i,
-                firstname: "Jeff" + i,
+                firstname: "Alexandra" + i,
                 matrikel: Math.floor(Math.random() * 222222),
                 age: Math.floor(Math.random() * 22),
                 gender: !!Math.round(Math.random()),

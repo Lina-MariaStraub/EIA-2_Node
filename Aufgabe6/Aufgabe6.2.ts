@@ -10,7 +10,6 @@
 IN GRUPPENARBEIT ERSTELLT*/
 
 
-
 namespace L06_Interfaces {
     window.addEventListener( "load", init );
     let address: string = "https://eia2node257767.herokuapp.com/";                  

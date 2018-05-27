@@ -15,14 +15,14 @@ namespace L06_Interfaces {
     let address: string = "https://eia2node257767.herokuapp.com/";                  
     function init( _event: Event ): void {
         console.log( "Init" );
-        //Enventlistener auf Button übergeben
+        //auf Button ein Eventlistener
         let insertButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById( "insert" );
         let searchButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById( "search" );
         let refreshButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById( "refresh" ); 
-        //Button für drei Bespieldatensätze 
+        //auf button BeispielDatensätze
         let exampleButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById( "exampleData" );
         insertButton.addEventListener( "click", insert );  
-        //Wenn geklickt wird führe refreshStudents aus  
+        //bei klick auf Button refresh ausführen 
         refreshButton.addEventListener( "click", refreshStudents );
         searchButton.addEventListener( "click", search );
         exampleButton.addEventListener( "click", exampleData )
@@ -39,19 +39,17 @@ namespace L06_Interfaces {
                 gender: !!Math.round(Math.random()),
                 studiengang: "OMB"
             }
-            //Funktion sendDataToHost, Variable student wird übergeben
-            sendDataToHost("addStudent", student)
+            //Funktion sendDataToHost
+            sendDataToHost("addStudent", student)//Variable student wird übergeben
         }
     }
-    //Funktion um Daten der Studenten zu speichern
-    function insert( _event: Event ): void {
+    function insert( _event: Event ): void {//Funktion um Daten der Studenten zu speichern
         let inputs: NodeListOf<HTMLInputElement> = document.getElementsByTagName( "input" );
         let genderButton: HTMLInputElement = <HTMLInputElement>document.getElementById( "male" );
         let matrikel: string = inputs[2].value;
         let studi: Studi;
 
-        //Interface übergeben
-        studi = {
+        studi = {//Interface übergeben
             name: inputs[0].value,
             firstname: inputs[1].value,
             matrikel: parseInt( matrikel ),
@@ -66,13 +64,13 @@ namespace L06_Interfaces {
 
         studiHomoAssoc[matrikel] = studi;// Datensatz im assoziativen Array unter der Matrikelnummer speichern
 
-        studiSimpleArray.push( studi );   // nur um das auch noch zu zeigen...
+        studiSimpleArray.push( studi );
 
-        sendDataToHost("addStudent", studi);//Funktion sendDataToHost, Objekt studi wird übergeben
+        sendDataToHost("addStudent", studi);//Objekt studi wird übergeben, Funktion sendDataToHost
     }//Methode addStudent
 
-    //Serverfunktion refreshStudents wird ausgeführt
-    //Funktion refreshStudents holt sich die Liste der ganzen Daten vom Server
+    //Serverfunktion refreshStudents ausführen
+    //Funktion refreshStudents holt sich Liste der Daten vom Server
     //Methode refreshStudents
     function refreshStudents(_event: Event): void {
         sendDataToHost("refreshStudents");
@@ -103,20 +101,18 @@ namespace L06_Interfaces {
     }
 
     function search( _event: Event ): void { //Funktion, um Studenten nach Matrikelnummer zu suchen
-                                                 //Funktion search aufstellen
+                                             //Funktion search aufstellen
         //Auf erste Textarea zugreifen
         let output: HTMLTextAreaElement = document.getElementsByTagName( "textarea" )[0];
         output.value = "";
 
         let inputs: NodeListOf<HTMLInputElement> = document.getElementsByTagName( "input" );//Zugriff auf Inputs
 
-        let matrikel: string = inputs[6].value; //Matrikel wird aufgerufen durch den 6. Input
+        let matrikel: string = inputs[6].value; //nach 6 Input wird matrikel aufgerufen
 
-        //Matrikelnummer wird gespeichert
-        let studi: Studi = studiHomoAssoc[matrikel];
+        let studi: Studi = studiHomoAssoc[matrikel]; //Matrikelnummer wird gespeichert
 
-        if ( studi ) {
-            //Übereinstimmung mit Student
+        if ( studi ) {//Übereinstimmung mit Student
             let line: string = matrikel + ": ";
             line += studi.name + ", " + studi.firstname + ", " + studi.age + " Jahre ";
             line += studi.gender ? ", (M)" : ", (F)";

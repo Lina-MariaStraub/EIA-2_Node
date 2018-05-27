@@ -1,9 +1,7 @@
 import * as Url from "url";//Bindet Url Modul mit ein
 
-//HTTP Objekt wird im Code erstellt
-//Interpreter sucht nach jedem möglichen Import im http- Modul  und wird ihn einzeln an das http- Objekt im Code anhängen
-import * as Http from "http";
-
+import * as Http from "http";//HTTP Objekt wird im Code erstellt
+                               //Interpreter sucht nach jedem möglichen Import im http- Modul  und wird ihn einzeln an das http- Objekt im Code anhängen
 namespace Node {//namespace erstellen
     let studis: L06_Interfaces.Studis = {};
 
@@ -11,7 +9,7 @@ namespace Node {//namespace erstellen
         [key: string]: string | string[];
     }
 
-    let port: number = process.env.PORT;    // Todo: Ändern!
+    let port: number = process.env.PORT;
     if ( port == undefined )
         port = 8100;
 
@@ -25,7 +23,7 @@ namespace Node {//namespace erstellen
 
     function handleRequest( _request: Http.IncomingMessage, _response: Http.ServerResponse ): void {
         
-        _response.setHeader('Access-Control-Allow-Origin', '*'); //Die Headers sind dazu da um von anderen Servern zugreifen zu können
+        _response.setHeader('Access-Control-Allow-Origin', '*'); //Header um von andren Severn zugreifen zu können
         _response.setHeader('Access-Control-Request-Method', '*');
 
          _response.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');//Options: Um abzufragen, ob man auf den Server zugreifen kann

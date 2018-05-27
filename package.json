@@ -3,9 +3,11 @@
 	"version" : "1.0.0",
 	"description" : "First Server Test",
 	"author" : "Lina-Maria",
-	"main" : "Server.js",
+
+	"main" : "Aufgabe6/Server.js",
 	"scripts" : {
-		"start" : "node Server.js"
+
+		"start" : "node Aufgabe6/Server.js"
 	},
 	"engines" : {
 		"node" : "6.11.1"
@@ -13,3 +15,4 @@
 	"dependencies" : {
 	}
 }
+

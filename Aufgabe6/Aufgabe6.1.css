@@ -1,0 +1,17 @@
+* {
+	display: block;
+	vertical-align: top
+}
+
+head {
+	display: none;
+}
+
+
+input[type="radio"], input[type="checkbox"], input[type="number"], label {
+	display: inline;
+}
+
+button {
+	margin:1em 0em;
+}

@@ -22,38 +22,38 @@ IN GRUPPENARBEIT ERSTELLT-->
 <body>
 	<!--Fielset, um Formelemente zu gruppieren-->
 	<fieldset id="input">
-		<legend> Type student data here </legend><!--��berschrift-->
-		<input type="text" name="name" placeholder="name"/>
-		<input type="text" name="firstname" placeholder="firstname"/>
-		<input type="text" name="matrikel" placeholder="matrikel"/>
-		<input type="number" name="age" placeholder="age" min="1" max="120"/>
+		<legend> Studentendaten </legend>
+		<input type="text" name="name" placeholder="Name"/>
+		<input type="text" name="firstname" placeholder="Vorname"/>
+		<input type="text" name="matrikel" placeholder="Matrikel"/>
+		<input type="number" name="age" placeholder="Alter" min="1" max="120"/>
 		<input type="radio" name="gender" value="male" id="male"/>
-		<label for="male">Male</label>
+		<label for="male">Männlich</label>
 		<input type="radio" name="gender" value="female" id="female"/>
-		<label for="female">Female</label>
+		<label for="female">Weiblich</label>
 		<select name="studiengang" id="select">
 			<option value="MKB">MKB</option>
 			<option value="OMB">OMB</option>
 			<option value="MIB">MIB</option>
 		</select>
-		<button type="button" id="insert">Insert to database</button>
+		<button type="button" id="insert">In Datenbank einfügen</button>
 	</fieldset>
 	<fieldset id="searchStudents">
 	<legend> Suche nach Student </legend>
 	<!--Matrikelnummer-->
 		<input type="text" name="search" placeholder="matrikel"/>
-		<button type="button" id="search">Search</button><!--Button um den Studenten nach der Matrikelnummer zu suchen-->
+		<button type="button" id="search">Suchen</button><!--Button um den Studenten nach der Matrikelnummer zu suchen-->
 	<!--Textfeld-->
 		<textarea id="outputMatrikel" rows="20" cols="90"> </textarea>
 	</fieldset>
 	<!--Fielset um Formelemente zu gruppieren-->
 	<fieldset id="output">
-		<legend> All student data </legend>
+		<legend> Alle Studentendaten </legend>
 		<!--Refresh Button-->
 		<button type="button" id="refresh">Refresh</button>
 		<!--Textfeld-->
 		<textarea rows="20" cols="90"> </textarea>
 	</fieldset>
-	<button id="exampleData">Cooles Zeugs</button>
+	<button id="exampleData">Cooles Zeug</button>
 </body>
 </html>

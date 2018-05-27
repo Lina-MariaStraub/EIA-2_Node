@@ -1,3 +1,16 @@
+/*Aufgabe: (Aufgabe 7)
+        Name: Lina-Maria Straub
+        Matrikel: (257767)
+        
+        Datum: (27.05.2018)
+        Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+        Er wurde nicht kopiert und auch nicht diktiert.
+
+
+IN GRUPPENARBEIT ERSTELLT*/
+
+
+
 namespace L06_Interfaces {
     window.addEventListener( "load", init );
     let address: string = "https://eia2node257767.herokuapp.com/";                  

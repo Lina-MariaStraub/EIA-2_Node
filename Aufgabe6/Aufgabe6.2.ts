@@ -1,6 +1,6 @@
 namespace L06_Interfaces {
     window.addEventListener( "load", init );
-    let address: string = "https://eia2aufg6von257767.herokuapp.com/";                  
+    let address: string = "https://eia2node257767.herokuapp.com/";                  
     function init( _event: Event ): void {
         console.log( "Init" );
         //Enventlistener auf Button übergeben

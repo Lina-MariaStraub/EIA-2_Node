@@ -4,10 +4,10 @@
 	"description" : "First Server Test",
 	"author" : "Lina-Maria",
 
-	"main" : "Aufgabe6/Server.js",
+	"main" : "Server.js",
 	"scripts" : {
 
-		"start" : "node Aufgabe6/Server.js"
+		"start" : "node Server.js"
 	},
 	"engines" : {
 		"node" : "6.11.1"
